@@ -4,10 +4,10 @@ import socket
 import sys 
 import platform
 import os 
-#import pymongo 
+import pymongo 
 
 MODULE_NUM = 2
-HOME_PATH = "/home/mfl24/Documents/RNEL_GIT/haptic_environment_task_control/"
+HOME_PATH = "/home/actionlab/hapticEnvironment_TrialControl/"
 UTILS_PATH = os.path.join(HOME_PATH, "utils/")
 NATNET_PATH = "C:/Users/rnel-localadmin/Documents/ROBOT_SOFTWARE/NatNetSDK/Samples/PythonClient/"
 sys.path.append(NATNET_PATH)

@@ -16,6 +16,7 @@ import random
 from State import *
 import sys  
 sys.path.append(Globals.UTILS_PATH)
+print(sys.path)
 import haptics
 import graphics
 import msgUtils 
