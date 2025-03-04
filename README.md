@@ -21,71 +21,22 @@ A Python-based trial management interface for haptic environment experiments. Th
 
 ## Installation Instructions
 
-### Option 1: Using Python venv (Recommended for beginners)
-
-1. Install Python 3.11:
-   - Download Python 3.11 from [python.org](https://www.python.org/downloads/release/python-3116/)
-   - During installation, check "Add Python to PATH"
-   - Verify installation: `python --version`
-
-2. Create and activate virtual environment:
-```powershell
-# Remove existing venv if any
-Remove-Item -Recurse -Force venv
-
-# Create new venv
-python -m venv venv
-
-# Activate venv
-.\venv\Scripts\Activate.ps1
-
-# Install dependencies
-pip install -r requirements.txt
-```
-
-### Option 2: Using Miniconda
-
-1. Install Miniconda:
-   - Download Miniconda from [conda.io](https://docs.conda.io/en/latest/miniconda.html)
-   - Run the installer and follow prompts
-   - Open a new PowerShell window
-
-2. Create and activate conda environment:
-```powershell
-# Remove existing environment if any
-conda env remove -n haptic_env
-
-# Create new environment
-conda create -n haptic_env python=3.11
-
-# Activate environment
-conda activate haptic_env
-
-# Install dependencies
-pip install -r requirements.txt
-```
-
-### Option 3: Using uv (Fast Python package installer)
-
 1. Install uv:
 ```powershell
-# Install uv using pip
-pip install uv
-
-# Or using PowerShell
+# Install uv using PowerShell
 iwr https://astral.sh/uv/install.ps1 -useb | iex
+
+# Add uv to PATH
+$env:Path = "$env:USERPROFILE\.local\bin;$env:Path"
 ```
 
 2. Create and activate environment:
 ```powershell
-# Remove existing venv if any
-Remove-Item -Recurse -Force venv
-
-# Create new venv
-uv venv
+# Create new venv with Python 3.11
+uv venv --python 3.11
 
 # Activate venv
-.\venv\Scripts\Activate.ps1
+.\.venv\Scripts\activate.ps1
 
 # Install dependencies
 uv pip install -r requirements.txt
