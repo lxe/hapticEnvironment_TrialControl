@@ -2,3 +2,5 @@ utils/__pycache__
 __pycache__
 .metadata
 venv/
+build/
+dist/

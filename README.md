@@ -155,3 +155,21 @@ The system supports:
 ## License
 
 [Add your license information here]
+
+## Building Executable
+
+To create a standalone executable (.exe) file:
+
+1. Ensure all dependencies are installed:
+```powershell
+pip install -r requirements.txt
+```
+
+2. Build the executable:
+```powershell
+pyinstaller taskControl.spec
+```
+
+The executable will be created in the `dist` directory as `HapticEnvironment.exe`. This executable includes all necessary dependencies and can be run on any Windows system without requiring Python installation.
+
+Note: The first build might take several minutes as it packages all dependencies.
