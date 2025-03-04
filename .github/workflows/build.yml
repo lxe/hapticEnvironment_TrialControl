@@ -25,6 +25,10 @@ jobs:
         pip install -r requirements.txt
     
     - name: Build executable
+      env:
+        KIVY_GL_BACKEND: 'angle_sdl2'  # Use ANGLE backend for Windows
+        KIVY_WINDOW: 'sdl2'  # Use SDL2 window provider
+        KIVY_USE_DX11: '1'  # Use DirectX 11
       run: |
         pyinstaller taskControl.spec
     
